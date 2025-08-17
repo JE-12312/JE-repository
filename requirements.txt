@@ -1,31 +1,40 @@
-langchain
-langchain_community
-langchain_openai
+langchain==0.2.14
+langchain-community==0.2.12
+langchain-openai==0.1.23
 langchain-anthropic
 langchain-text-splitters
-langchain-chroma
+langchain-chroma==0.1.2
 langchain-ollama
 langchain-experimental
+langchain-core
 
 anthropic
-openai
+chromadb==0.5.5
+openai>=1.40.0
 
 nltk==3.8.1
+
 pypdfium2
-pypdf
+pypdf==4.3.1
+pydantic>=2.7,<3
+protobuf<6
+python-pptx
+python-magic-bin==0.4.14
+pysqlite3-binary
+
 rapidocr-onnxruntime
+streamlit>=1.32
 sentence-transformers
 unstructured
 unstructured[pdf]
 
-python-pptx
-python-magic-bin==0.4.14
-
+tiktoken>=0.7.0
 faiss-cpu
 grandalf 
-streamlit
 
-streamlit
-langchain-core
-pysqlite3-binary
-pypdf
+
+
+
+
+
+
