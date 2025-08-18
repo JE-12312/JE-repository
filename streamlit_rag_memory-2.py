@@ -1,3 +1,6 @@
+pip install -U langchain-openai langchain langchain-chroma langchain-community streamlit openai pypdf
+
+
 import os
 import streamlit as st
 import tempfile
@@ -97,5 +100,6 @@ if uploaded_file is not None:
                 st.session_state.messages.append({"role": "assistant", "content": response})
                 st.write(response)
                 
+
 
 
