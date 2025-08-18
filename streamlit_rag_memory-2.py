@@ -1,6 +1,3 @@
-pip install -U langchain-openai langchain langchain-chroma langchain-community streamlit openai pypdf
-
-
 import os
 import streamlit as st
 import tempfile
@@ -18,10 +15,6 @@ import chromadb
 chromadb.api.client.SharedSystemClient.clear_system_cache()
 
 
-
-
-
-
 #cache_resource로 한번 실행한 결과 캐싱해두기
 @st.cache_resource
 def load_pdf(_file):
@@ -32,6 +25,7 @@ def load_pdf(_file):
         loader = PyPDFLoader(file_path=tmp_file_path)
         pages = loader.load_and_split()
     return pages
+
 
 #텍스트 청크들을 Chroma 안에 임베딩 벡터로 저장
 @st.cache_resource
@@ -100,6 +94,7 @@ if uploaded_file is not None:
                 st.session_state.messages.append({"role": "assistant", "content": response})
                 st.write(response)
                 
+
 
 
 
